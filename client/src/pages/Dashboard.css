@@ -1,0 +1,85 @@
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-image: url('C:\Users\venka\OneDrive\Desktop\login_with_otp\5b690925e376e9bb7aad0eac791776ee.gif');
+    background-size: cover;
+    align-self: flex-start;
+    padding-left: 50px;
+  }
+  
+  .button-container {
+    display: inline-flex;
+    flex-direction: row; /* Adjust the direction as needed */
+    gap: 20px; /* Adjust the gap between buttons as needed */
+    margin-top: 400px;
+    align-self: center;
+  }
+  
+  .dashboard-header {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: calc(20px + 5vmin);
+    color: #0c0101;
+  }
+  
+  .dashboard-link {
+    color: #bb998d;
+  }
+  
+  /* New button styles */
+  .button-container button {
+    background-color: #000000;
+    color: rgb(142, 13, 156);
+    padding: 10px 20px; /* Adjust padding as needed */
+    font-size: 40px; /* Adjust font size as needed */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .button-container button:hover {
+    background-color: #d6d6da;
+  }
+  
+  /* Adjust the position of individual buttons as needed */
+  .button-container button:nth-child(1) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
+  
+  .button-container button:nth-child(2) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
+  
+  .button-container button:nth-child(3) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
+  
+  .button-container button:nth-child(4) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
+
+  .button-container button:nth-child(5) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
+
+  .button-container button:nth-child(6) {
+    position: relative;
+    top: -400px;
+    left: 10px;
+  }
