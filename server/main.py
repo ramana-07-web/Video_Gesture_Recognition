@@ -20,7 +20,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 d={1:"HELLO",0:"DOWN",2:"UP"}
-MODEL=tf.keras.models.load_model("C:/Users/venka/OneDrive/Desktop/login_with_otp/client/model.h5") 
+MODEL=tf.keras.models.load_model("model.h5")
 
 
 CLASS_NAMES=[]
@@ -52,8 +52,8 @@ async def predict(file : UploadFile=File(...)):
     predicted_class=CLASS_NAMES[index]
     confidence=np.max(predictions[0])
     return {
-        'class':str(d[int(predicted_class)-1]),
-        'confidence':float(confidence)
+        'class': d.get(int(predicted_class)-1, "Unknown"),
+        'confidence': float(confidence)
     }
 
 

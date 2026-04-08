@@ -19,7 +19,7 @@ const App = () => {
   // };
   const stopPythonFile = async () => {
   try {
-    const response = await fetch("http://127.0.0.1:8080/stop_python_file", {
+    const response = await fetch("http://127.0.0.1:8085/stop_python_file", {
       method: "POST",
     });
 
@@ -38,7 +38,7 @@ const App = () => {
 
       {/* ✅ DO NOT TOUCH THIS */}
       <img
-        src="http://127.0.0.1:8080/video_feed_haar"
+        src="http://127.0.0.1:8085/video_feed_haar"
         alt="video"
         width="600"
       />

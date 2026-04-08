@@ -1,7 +1,10 @@
 from flask import Flask, Response, jsonify
+from flask_cors import CORS
 import cv2
+import time
 
 app = Flask(__name__)
+CORS(app)
 
 print("APP2 RUNNING")
 
@@ -13,7 +16,7 @@ eye_cascade = cv2.CascadeClassifier(
     cv2.data.haarcascades + 'haarcascade_eye.xml'
 )
 
-# ✅ Camera
+# ✅ Camera (Reverted to default backend to fix black static screen)
 capture = cv2.VideoCapture(0)
 
 print("Camera opened:", capture.isOpened())
@@ -62,6 +65,8 @@ def generate_frames():
         ret, frame = capture.read()
 
         if not ret:
+            print("Failed to grab frame")
+            time.sleep(0.1)
             continue
 
         gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
@@ -105,7 +110,7 @@ def stop_python_file():
 
 
 if __name__ == '__main__':
-    app.run(port=8080, debug=True)
+    app.run(port=8085, debug=True)
 # from flask import Flask, Response
 # from flask_cors import CORS
 # import cv2
